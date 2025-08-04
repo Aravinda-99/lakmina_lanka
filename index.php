@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/hero-slideshow.js" defer></script>
 </head>
@@ -48,11 +49,16 @@
         </div>
     </section>
 
+    <!-- Include the intro section -->
+    <?php include 'home/whatwe.php'; ?>
+    <?php include 'home/intro2.php'; ?>
+    
+
     <main>
         <div class="container">
 
-            <!-- Section 1: Who We Are? -->
-            <section class="about-section">
+            <!-- Section 1: Who We Are? --> 
+            <!-- <section class="about-section">
                 <div class="flex-container">
                     <div class="image-column">
                         <img src="images/about/about2.jpg" alt="Modern Warehouse">
@@ -67,10 +73,10 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Section 2: Vision -->
-            <section class="about-section vision-section">
+            <!-- <section class="about-section vision-section">
                 <div class="flex-container reverse-on-mobile">
                     <div class="text-column dark-bg">
                         <h2>Vision:</h2>
@@ -85,10 +91,10 @@
                         <img src="images/about/about3.jpg" alt="Eco-friendly Container Home">
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Section 3: Mission -->
-            <section class="about-section">
+            <!-- <section class="about-section">
                 <div class="flex-container">
                     <div class="image-column">
                         <img src="images/about/about4.jpg" alt="Building Construction Site">
@@ -103,7 +109,7 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
 
         <!-- Section 4: Our Services - Full Width -->
