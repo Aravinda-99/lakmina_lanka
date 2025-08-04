@@ -12,7 +12,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         position: relative;
-        padding: 4rem 0;
+        padding: 1rem 0;
     }
 
     /* Add overlay for better text readability */
@@ -48,7 +48,7 @@
 
     .about-image-shape {
         flex-basis: 45%;
-        height: 400px; /* Define a height for the shape container */
+        height: 300px; /* Reduced height for the shape container */
         position: relative; /* Crucial for positioning the shapes inside */
     }
 
