@@ -233,6 +233,70 @@ nav a:hover, nav a.active {
             letter-spacing: normal;
         }
 
+        .about-main-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* --- Override into.php body styles --- */
+        /* Force override of into.php body styles */
+        body {
+            font-family: 'Poppins', sans-serif !important;
+            margin: 0 !important;
+            background-color: #f0f2f5 !important;
+            color: #333 !important;
+            display: block !important;
+            justify-content: unset !important;
+            align-items: unset !important;
+            min-height: auto !important;
+            padding: 0 !important;
+        }
+
+        /* Override into.php global styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Override into.php section styles */
+        .about-us-section {
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            background-color: transparent !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+        }
+
+        /* Override into.php typography */
+        .about-us-section h2,
+        .about-us-section h3,
+        .about-us-section p {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        /* Override into.php dark-bg styles */
+        .about-us-section .dark-bg {
+            background-color: #1a2a4c !important;
+            color: #ffffff !important;
+        }
+
+        .about-us-section .dark-bg h3 {
+            color: #ffffff !important;
+        }
+
+        .about-us-section .dark-bg p {
+            color: #e0e0e0 !important;
+            opacity: 0.9 !important;
+        }
+
         /* --- Our Services Section --- */
         .services-section .container {
             max-width: 100%;
@@ -813,3 +877,209 @@ nav a:hover, nav a.active {
             text-align: center;
         }
     } 
+
+/* --- Features Section (from intro2.php) --- */
+.features-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.feature-row:last-child {
+    margin-bottom: 0;
+}
+
+.feature-image,
+.feature-text {
+    flex-basis: 48%;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.feature-text h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #1a2a4c;
+    position: relative;
+    padding-bottom: 0.75rem;
+    font-family: 'Poppins', serif;
+}
+.feature-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ef4444;
+}
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #555;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border: 2px solid #ef4444;
+    border-radius: 50px;
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+.btn:hover {
+    background-color: #ef4444;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .features-section {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .feature-row {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .feature-image,
+    .feature-text {
+        flex-basis: 100%;
+    }
+    .feature-image {
+        margin-bottom: 2rem;
+    }
+    .feature-row.reverse-on-mobile .feature-image {
+        margin-bottom: 0;
+        margin-top: 2rem;
+    }
+    .feature-text {
+        text-align: center;
+    }
+    .feature-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+} 
+
+/* --- What We Are Section (from whatwe.php) --- */
+.about-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-text {
+    flex-basis: 50%;
+    max-width: 500px;
+}
+
+.about-image-shape {
+    flex-basis: 45%;
+    height: 400px;
+    position: relative;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-text h2 strong {
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 2.5rem;
+}
+
+.btn-dark {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background-color: #2c3e50;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-dark:hover {
+    background-color: #34495e;
+}
+
+.shape {
+    position: absolute;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+}
+
+.shape-1 {
+    width: 60%;
+    height: 60%;
+    top: 0;
+    left: 0;
+}
+
+.shape-2 {
+    width: 70%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-image-shape {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+        margin-top: 2rem;
+    }
+} 

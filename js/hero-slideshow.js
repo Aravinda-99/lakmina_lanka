@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/hero/hero1.jpg',
         'images/hero/hero2.jpg',
         'images/hero/hero3.jpg',
-        'images/hero/hero4.jpg',
-        'images/hero/hero5.jpg'
+        'images/hero/hero10.jpeg',
+        'images/hero/hero11.jpeg'
     ];
     
     let currentImageIndex = 0;
