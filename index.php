@@ -59,8 +59,12 @@
 
         <!-- Section 4: Our Services - Full Width -->
         <section class="services-section">
+            <video class="services-video-bg" autoplay muted loop playsinline>
+                <source src="video/construction.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="container">
-                <h2>OUR SERVICES</h2>
+                <h2>Our Services</h2>
                 <p class="subtitle">From Residential Complexes To Commercial Buildings, We Manage Every Aspect Of Construction With Precision And Care.</p>
                 <div class="services-grid">
                     <div class="service-card">
@@ -89,7 +93,7 @@
         </section>
 
         <!-- Section 5: Why Choose Us? - Full Width -->
-        <section class="choose-us-section">
+        <!-- <section class="choose-us-section">
             <div class="container">
                 <div class="flex-container">
                     <div class="text-column">
@@ -121,12 +125,20 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <!-- Include the custom why section -->
+        <?php include 'home/why.php'; ?>
+
+        <!-- Include the helping section -->
+        <?php include 'home/helping.php'; ?>
+
+        
 
         </div>
 
         <!-- Section 6: Stats Section -->
-        <section class="full-width-section dark-section stats-section">
+        <!-- <section class="full-width-section dark-section stats-section">
             <div class="stats-container">
                 <h2>HELPING A LOCAL BUSINESS REINVENT</h2>
                 <div class="stats-grid">
@@ -152,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Section 7: CTA Section -->
         <section class="full-width-section cta-section" style="background-color:rgb(0, 20, 51);">
@@ -172,6 +184,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Include the contact section -->
+        <?php include 'home/contact.php'; ?>
 
         <!-- Section 8: Contact Section -->
         <section class="contact-section container">
