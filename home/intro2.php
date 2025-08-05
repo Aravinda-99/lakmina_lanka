@@ -1,183 +1,154 @@
-<!-- You can move these styles to your main CSS file -->
+<!-- Vision and Mission Section -->
 <style>
-    /* --- Google Font Import --- */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-    /* --- Demo Body Styles --- 
-       These are for demonstration purposes to center the component.
-       You can remove these or integrate them into your own site's body styles.
-    */
-    body {
-        font-family: 'Inter', sans-serif;
+    .vision-mission-section {
+        width: 100%;
         margin: 0;
-        background-color: #ffffff;
-        color: #4a4a4a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 3rem 1rem;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    /* --- Main Section Container --- */
-    .features-section {
-        width: 100%;
-        max-width: 1100px;
-        margin: 30px auto;
-    }
-
-    /* --- Feature Row Layout --- */
-    .feature-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: 6rem; /* Space between feature rows */
-    }
-    
-    /* Remove margin from the last row */
-    .feature-row:last-child {
+        padding: 0;
         margin-bottom: 0;
     }
 
-    /* --- Content Containers --- */
-    .feature-image,
-    .feature-text {
-        flex-basis: 48%; /* Give a little space between items */
+    /* Override container padding for this section */
+    .vision-mission-section .container {
+        padding: 0;
+        margin: 0;
     }
 
-    .feature-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
+    .vision-mission-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
-    /* --- Typography --- */
-    .feature-text h2 {
-        font-size: 2.25rem;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-        color: #333;
+    .vision-section,
+    .mission-section {
+        display: flex;
+        min-height: 120px;
         position: relative;
-        padding-bottom: 0.75rem;
     }
 
-    /* Decorative line under the heading */
-    .feature-text h2::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background-color: #ef4444; /* Red color for the line */
+    .vision-section {
+        background: #1a365d; /* Dark blue background for Vision */
     }
 
-    .feature-text p {
-        font-size: 1rem;
-        line-height: 1.7;
-        margin-bottom: 2rem;
+    .mission-section {
+        background: #0f172a; /* Darker blue background for Mission */
     }
 
-    /* --- Button Styles --- */
-    .btn {
-        display: inline-block;
-        padding: 0.8rem 1.8rem;
-        border: 2px solid #ef4444;
-        border-radius: 50px; /* Pill-shaped button */
-        color: #ef4444;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
+    .section-divider {
+        height: 2px;
+        background: #ffffff;
+        width: 100%;
     }
 
-    .btn:hover {
-        background-color: #ef4444;
+    .text-panel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px 40px;
         color: #ffffff;
     }
 
-    /* --- Responsive Design --- */
+    .image-panel {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .text-panel h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .text-panel p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        max-width: 500px;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-        .feature-row {
-            flex-direction: column; /* Stack image and text vertically */
-            margin-bottom: 4rem;
+        .vision-section,
+        .mission-section {
+            flex-direction: column;
+            min-height: auto;
         }
 
-        /* Reverse the order for the second row on mobile */
-        .feature-row.reverse-on-mobile {
-            flex-direction: column-reverse;
+        .text-panel {
+            padding: 40px 30px;
+            order: 1;
         }
 
-        .feature-image,
-        .feature-text {
-            flex-basis: 100%; /* Full width on smaller screens */
+        .image-panel {
+            order: 2;
+            min-height: 300px;
         }
 
-        .feature-image {
-            margin-bottom: 2rem;
-        }
-         
-        .feature-row.reverse-on-mobile .feature-image {
-            margin-bottom: 0;
-            margin-top: 2rem;
+        .text-panel h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        .feature-text {
-            text-align: center;
+        .text-panel p {
+            font-size: 1rem;
         }
-        
-        .feature-text h2::after {
-            left: 50%;
-            transform: translateX(-50%);
+    }
+
+    @media (max-width: 480px) {
+        .text-panel {
+            padding: 30px 20px;
+        }
+
+        .text-panel h2 {
+            font-size: 1.8rem;
+        }
+
+        .image-panel {
+            min-height: 250px;
         }
     }
 </style>
 
-<section class="features-section">
-
-    <!-- Row 1: Very Active Community -->
-    <div class="feature-row">
-        <div class="feature-image">
-            <img src="images/hero/hero10.jpeg" alt="Placeholder for community image">
+<section class="vision-mission-section">
+    <div class="vision-mission-container">
+        <!-- Vision Section -->
+        <div class="vision-section">
+            <div class="text-panel">
+                <h2>Vision:</h2>
+                <p>Lorem ipsum Odor Amet, consectetuer adipiscing elit. Urna Tincidunt Lectus Mi Porttitor Rutrum Habitasse. Interdum Pharetra Mi, Et Platea Lobortis Ex Sapien. Eros Eros Nisl Neque Porttitor Primis Elit Maecenas Viverra Quam Luctus Phasellus Class Ipsum Duis Elit Vehicula Nascetur.</p>
+            </div>
+            <div class="image-panel">
+                <img src="images/about/about3.jpg" alt="Eco-friendly Container Home">
+            </div>
         </div>
-        <div class="feature-text">
-            <h2>Vision</h2>
-            <p>To pioneer a sustainable future for Sri Lanka by engineering innovative infrastructure that harmonizes with the environment, empowers communities, and enriches lives for generations to come.</p>
-            <!-- <a href="#" class="btn">GO TO COMMUNITY</a> -->
+
+        <!-- Section Divider -->
+        <!-- <div class="section-divider"></div> -->
+
+        <!-- Mission Section -->
+        <div class="mission-section">
+            <div class="image-panel">
+                <img src="images/about/about4.jpg" alt="Building Construction Site">
+            </div>
+            <div class="text-panel">
+                <h2>Mission:</h2>
+                <p>Lorem ipsum Odor Amet, consectetuer adipiscing elit. Urna Tincidunt Lectus Mi Porttitor Rutrum Habitasse. Interdum Pharetra Mi, Et Platea Lobortis Ex Sapien Eros Eros Nisl! Neque Porttitor Primis Elit Maecenas. Viverra Quam Luctus Phasellus Class Ipsum Duis Elit Vehicula Nascetur.</p>
+            </div>
         </div>
     </div>
-
-    <!-- Row 2: Quick Installation -->
-    <div class="feature-row reverse-on-mobile">
-        <div class="feature-text">
-            <h2>Mission</h2>
-            <p>Our mission is to deliver fast, reliable, and high-quality solutions for our clients. We focus on efficiency, innovation, and customer satisfaction in every project we undertake.</p>
-            <!-- <a href="#" class="btn">DOWNLOAD NOW</a> -->
-        </div>
-        <div class="feature-image">
-            <img src="images/hero/hero11.jpeg" alt="Placeholder for installation image">
-        </div>
-    </div>
-
-    <!-- Row 3: Quick Mission -->
-    <!-- <div class="feature-row">
-        <div class="feature-image">
-            <img src="images/hero/hero5.jpg" alt="Mission Image">
-        </div>
-        <div class="feature-text">
-            <h2>Mission</h2>
-            <p>
-                Our mission is to deliver fast, reliable, and high-quality solutions for our clients. We focus on efficiency, innovation, and customer satisfaction in every project we undertake.
-            </p>
-            
-        </div>
-    </div> -->
-
 </section>

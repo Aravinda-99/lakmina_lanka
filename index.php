@@ -54,63 +54,8 @@
     <?php include 'home/intro2.php'; ?>
     
 
-    <main>
-        <div class="container">
+    <main class="intro2-after">
 
-            <!-- Section 1: Who We Are? --> 
-            <!-- <section class="about-section">
-                <div class="flex-container">
-                    <div class="image-column">
-                        <img src="images/about/about2.jpg" alt="Modern Warehouse">
-                    </div>
-                    <div class="text-column">
-                        <h2>WHO WE ARE?</h2>
-                        <p>
-                            Lakmina Lanka Group Is A Leading Multidisciplinary Construction And
-                            Engineering Company In Sri Lanka. With Over A Decade Of Experience, We
-                            Deliver Innovative, High-Quality, And Sustainable Infrastructure Solutions Across
-                            Residential, Commercial, And Industrial Sectors.
-                        </p>
-                    </div>
-                </div>
-            </section> -->
-
-            <!-- Section 2: Vision -->
-            <!-- <section class="about-section vision-section">
-                <div class="flex-container reverse-on-mobile">
-                    <div class="text-column dark-bg">
-                        <h2>Vision:</h2>
-                        <p>
-                            Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Urna Tincidunt Lectus Mi
-                            Porttitor Rutrum Habitasse. Interdum Pharetra Mi, Et Platea Lobortis Ex Sapien.
-                            Eros Eros Nisl Neque Porttitor Primis Elit Maecenas. Viverra Quam Luctus
-                            Phasellus Class Ipsum Duis Elit Vehicula Nascetur.
-                        </p>
-                    </div>
-                    <div class="image-column">
-                        <img src="images/about/about3.jpg" alt="Eco-friendly Container Home">
-                    </div>
-                </div>
-            </section> -->
-
-            <!-- Section 3: Mission -->
-            <!-- <section class="about-section">
-                <div class="flex-container">
-                    <div class="image-column">
-                        <img src="images/about/about4.jpg" alt="Building Construction Site">
-                    </div>
-                    <div class="text-column dark-bg">
-                        <h2>Mission:</h2>
-                        <p>
-                            Lorem Ipsum Odor Amet, Consectetuer Adipiscing Elit. Urna Tincidunt Lectus Mi
-                            Porttitor Rutrum Habitasse. Interdum Pharetra Mi, Et Platea Lobortis Ex Sapien.
-                            Eros Eros Nisl Neque Porttitor Primis Elit Maecenas. Viverra Quam Luctus
-                            Phasellus Class Ipsum Duis Elit Vehicula Nascetur.
-                        </p>
-                    </div>
-                </div>
-            </section> -->
-        </div>
 
         <!-- Section 4: Our Services - Full Width -->
         <section class="services-section">
