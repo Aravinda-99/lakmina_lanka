@@ -12,7 +12,7 @@ body {
 
 /* Header and Navigation Bar Styling */
 header {
-    background-color: #001c4e; /* Dark blue background for the header */
+    background-color: #21314b; /* Dark blue background for the header */
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -44,6 +44,11 @@ header {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -360,7 +365,7 @@ nav a:hover, nav a.active {
 
         /* --- Helping Section Styles --- */
         .konstruk-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/about/v2.jpg');
             background-size: cover;
             background-position: center;
             color: #ffffff;
@@ -688,7 +693,7 @@ nav a:hover, nav a.active {
         }
 
         .cta-form button {
-            background-color: #00aaff;
+            background-color: #da9b13;
             color: #ffffff;
             border: none;
             padding: 1rem 2rem;
@@ -701,6 +706,39 @@ nav a:hover, nav a.active {
 
         .cta-form button:hover {
             background-color: #0088cc;
+        }
+
+        /* --- CTA Section Background Wrapper --- */
+        .cta-section-wrapper {
+            width: 100%;
+            background-color: rgb(0, 20, 51); /* Fallback background color */
+            background-image: url('../images/background/bg3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: 2rem 0;
+            min-height: 300px;
+        }
+
+        /* Add overlay for better text readability */
+        .cta-section-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(5, 32, 78, 0.85);
+            z-index: 1;
+        }
+
+        /* Ensure content appears above the overlay */
+        .cta-section-wrapper .cta-section {
+            position: relative;
+            z-index: 2;
+            padding: 1rem 0; /* Override the default full-width-section padding */
         }
 
         /* --- Contact Section --- */
@@ -872,6 +910,14 @@ nav a:hover, nav a.active {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 3rem auto 0 auto; /* Increased top margin for more space above */
         }
 
         .footer-links li {
@@ -1469,7 +1515,7 @@ nav a:hover, nav a.active {
     display: flex;
     max-width: 1400px;
     width: 100%;
-    margin: 40px auto;
+    margin: 0 auto;
     position: relative;
     border-radius: 0;
     overflow: hidden;
@@ -1644,5 +1690,384 @@ nav a:hover, nav a.active {
     }
     .contact-custom-section .contact-form-column {
         padding: 2rem;
+    }
+} 
+
+.popup-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #262f3f;
+    padding: 0.8rem 5%; /* Reduced vertical padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: top 0.3s, opacity 0.3s;
+}
+
+.popup-header .header-logo {
+    color: #fff;
+}
+
+.popup-header .header-logo .logo-icon {
+    font-size: 1.5rem; /* Smaller icon for compact header */
+}
+
+.popup-header .header-logo .logo-text {
+    font-size: 0.85rem; /* Smaller text for compact header */
+}
+
+.popup-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.popup-header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.popup-header nav a:hover, .popup-header nav a.active {
+    background-color: rgba(255,255,255,0.1);
+} 
+
+/* --- Hero Section Animation --- */
+.hero-content, .hero-content h1, .hero-content p, .hero-content .discover-button {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+}
+
+.hero-content.animate-in {
+  animation: hero-fade-in 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.hero-content.animate-in h1 {
+  animation: hero-fade-in 0.7s 0.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.hero-content.animate-in p {
+  animation: hero-fade-in 0.7s 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.hero-content.animate-in .discover-button {
+  animation: hero-fade-in 0.7s 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+/* Fallback: Show hero content if JS fails */
+.no-js .hero-content, noscript .hero-content {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+} 
+
+/* --- Scroll Animation for WhatWe Section --- */
+.about-text, .about-image-shape {
+  opacity: 0;
+  transition: none;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.fade-in-right {
+  animation: fadeInRight 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+
+/* --- Scroll Animation for Vision & Mission Section --- */
+.vision-mission-section, .vision-mission-section .vm-card {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: none;
+}
+.fade-in-up {
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.fade-in-up.delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-in-up.delay-2 {
+  animation-delay: 0.5s;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+/* --- Scroll Animation for Services Section --- */
+.services-section h2, .services-section .subtitle, .services-section .service-card {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: none;
+}
+.services-section.fade-in-up h2 {
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.services-section.fade-in-up .subtitle {
+  animation: fadeInUp 1.5s 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.services-section.fade-in-up .service-card:nth-child(1) {
+  animation: fadeInUp 1.5s 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.services-section.fade-in-up .service-card:nth-child(2) {
+  animation: fadeInUp 1.5s 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.services-section.fade-in-up .service-card:nth-child(3) {
+  animation: fadeInUp 1.5s 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Scroll Animation for Why Choose Us Section --- */
+.why-choose-us-content, .why-choose-us-images {
+  opacity: 0;
+  transition: none;
+}
+.why-choose-us-content.fade-in-left {
+  animation: fadeInLeft 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.why-choose-us-images.fade-in-right {
+  animation: fadeInRight 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Scroll Animation for Helping Section --- */
+.konstruk-section .content-left, .konstruk-section .stats-right {
+  opacity: 0;
+  transition: none;
+}
+.konstruk-section .content-left.fade-in-left {
+  animation: fadeInLeft 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.konstruk-section .stats-right.fade-in-right {
+  animation: fadeInRight 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Scroll Animation for CTA Section --- */
+.cta-section .text-column, .cta-section .image-column {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: none;
+}
+.cta-section.fade-in-up .text-column {
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.cta-section.fade-in-up .image-column {
+  animation: fadeInUp 1.5s 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Scroll Animation for Gallery Section --- */
+.construction-gallery-section .gallery-header, .construction-gallery-section .gallery-item {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: none;
+}
+.construction-gallery-section.fade-in-up .gallery-header {
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(1) {
+  animation: fadeInUp 1.5s 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(2) {
+  animation: fadeInUp 1.5s 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(3) {
+  animation: fadeInUp 1.5s 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(4) {
+  animation: fadeInUp 1.5s 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(5) {
+  animation: fadeInUp 1.5s 1.1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.construction-gallery-section.fade-in-up .gallery-item:nth-child(6) {
+  animation: fadeInUp 1.5s 1.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Scroll Animation for Contact Section --- */
+.contact-custom-section .contact-form-column, .contact-custom-section .contact-info-column, .contact-custom-section .contact-image-column {
+  opacity: 0;
+  transition: none;
+}
+.contact-custom-section .contact-form-column.fade-in-left {
+  animation: fadeInLeft 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.contact-custom-section .contact-info-column.fade-in-up {
+  animation: fadeInUp 1.5s 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.contact-custom-section .contact-image-column.fade-in-right {
+  animation: fadeInRight 1.5s 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+} 
+
+/* --- Contact Icon Size --- */
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+} 
+
+/* --- Mobile Header Styles --- */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.8rem 4%;
+        width: 96%;
+        left: 2%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    
+    .header-logo .logo-text {
+        font-size: 0.8rem;
+        line-height: 1.1;
+    }
+    
+    .header-logo .logo-icon {
+        font-size: 2rem;
+        margin-right: 8px;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #21314b;
+        border-radius: 0 0 20px 20px;
+        padding: 1rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav li:last-child {
+        border-bottom: none;
+    }
+    
+    nav a {
+        display: block;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        text-align: center;
+    }
+    
+    nav a:hover, nav a.active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        flex-shrink: 0;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.6rem 3%;
+        width: 98%;
+        left: 1%;
+    }
+    
+    .header-logo .logo-text {
+        font-size: 0.7rem;
+    }
+    
+    .header-logo .logo-icon {
+        font-size: 1.8rem;
+        margin-right: 6px;
     }
 } 

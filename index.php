@@ -13,6 +13,24 @@
     <script src="js/hero-slideshow.js" defer></script>
 </head>
 <body>
+    <!-- Popup Header (hidden by default, shown on scroll) -->
+    <div class="popup-header" style="display:none;">
+        <div class="header-logo">
+            <div class="logo-icon">L</div>
+            <div class="logo-text">
+                LAKMINA LANKA<br>
+                BUILDING SYSTEMS (PVT) LTD.
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#who-we-are">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Header Section with Logo and Navigation -->
     <header>
@@ -26,11 +44,16 @@
         <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#who-we-are">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- Main Hero Section -->
@@ -51,14 +74,14 @@
 
     <!-- Include the intro section -->
     <?php include 'home/whatwe.php'; ?>
-    <?php include 'home/intro2.php'; ?>
+    <?php include 'home/vistion_mission.php'; ?>
     
 
     <main class="intro2-after">
 
 
         <!-- Section 4: Our Services - Full Width -->
-        <section class="services-section">
+        <section class="services-section" id="services">
             <video class="services-video-bg" autoplay muted loop playsinline>
                 <source src="video/construction.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -91,6 +114,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Include the why choose us section -->
+        <?php include 'home/whychoose.php'; ?>
 
         <!-- Section 5: Why Choose Us? - Full Width -->
         <!-- <section class="choose-us-section">
@@ -128,7 +154,7 @@
         </section> -->
 
         <!-- Include the custom why section -->
-        <?php include 'home/why.php'; ?>
+        
 
         <!-- Include the helping section -->
         <?php include 'home/helping.php'; ?>
@@ -167,29 +193,34 @@
         </section> -->
 
         <!-- Section 7: CTA Section -->
-        <section class="full-width-section cta-section" style="background-color:rgb(0, 20, 51);">
-            <div class="cta-container">
-                <div class="flex-container">
-                    <div class="text-column">
-                        <h2>EXCITED TO DRIVE INTO YOUR COMPANY PROJECT</h2>
-                        <p>There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some Form, By Injected Humour, Or Free Randomised Words Which Don't Look Even.</p>
-                        <form class="cta-form">
-                            <input type="email" placeholder="michael@ymail.com">
-                            <button type="submit">SUBSCRIBE</button>
-                        </form>
-                    </div>
-                    <div class="image-column">
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Modern+Project" alt="Modern container project">
+        <div class="cta-section-wrapper">
+            <section class="full-width-section cta-section">
+                <div class="cta-container">
+                    <div class="flex-container">
+                        <div class="text-column">
+                            <h2>EXCITED TO DRIVE INTO YOUR COMPANY PROJECT</h2>
+                            <p>There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some Form, By Injected Humour, Or Free Randomised Words Which Don't Look Even.</p>
+                            <form class="cta-form">
+                                <input type="email" placeholder="michael@ymail.com">
+                                <button type="submit">SUBSCRIBE</button>
+                            </form>
+                        </div>
+                        <div class="image-column">
+                            <img src="images/hero/hero5.jpg" alt="Modern container project">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
+        <!-- Include the gallery section -->
+        <?php include 'home/gallery.php'; ?>
 
         <!-- Include the contact section -->
         <?php include 'home/contact.php'; ?>
 
         <!-- Section 8: Contact Section -->
-        <section class="contact-section container">
+        <!-- <section class="contact-section container">
             <h2 class="contact-title">CONTACT US</h2>
             <div class="contact-info-bar">
                 <div class="contact-info-item">
@@ -233,7 +264,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </main>
     
@@ -287,5 +318,71 @@
         </div>
     </footer>
 
+<script>
+// Popup header scroll logic
+window.addEventListener('scroll', function() {
+    var popupHeader = document.querySelector('.popup-header');
+    if (window.scrollY > 100) {
+        popupHeader.style.display = 'flex';
+    } else {
+        popupHeader.style.display = 'none';
+    }
+});
+
+// Smooth scroll and active link logic
+function smoothScrollTo(target) {
+  var el = document.querySelector(target);
+  if (el) {
+    window.scrollTo({
+      top: el.getBoundingClientRect().top + window.pageYOffset - 30, // offset for fixed header
+      behavior: 'smooth'
+    });
+  }
+}
+
+function setActiveLink(href) {
+  document.querySelectorAll('.popup-header a, header a').forEach(function(link) {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === href) {
+      link.classList.add('active');
+    }
+  });
+}
+
+document.querySelectorAll('.popup-header a, header a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var href = link.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      e.preventDefault();
+      smoothScrollTo(href);
+      setActiveLink(href);
+    }
+  });
+});
+
+// Update active link on scroll
+const sectionIds = ['#who-we-are', '#services', '#contact'];
+const navLinks = Array.from(document.querySelectorAll('.popup-header a, header a'));
+window.addEventListener('scroll', function() {
+  let fromTop = window.scrollY + 80; // offset for header
+  let currentSection = '';
+  sectionIds.forEach(function(id) {
+    let section = document.querySelector(id);
+    if (section && section.offsetTop <= fromTop) {
+      currentSection = id;
+    }
+  });
+  if (currentSection) {
+    setActiveLink(currentSection);
+  } else {
+    setActiveLink('#'); // Home
+  }
+});
+</script>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
 </body>
 </html>

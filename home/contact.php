@@ -1,8 +1,8 @@
 <!-- Contact Section -->
-<section class="contact-custom-section">
+<section class="contact-custom-section" id="contact">
     <!-- Left Column: Form -->
     <div class="contact-form-column">
-        <p class="contact-subtitle">LET'S TALK</p>
+        <p class="contact-subtitle">Contact Us</p>
         <h2 class="contact-main-title">Have an upcoming project?</h2>
         <form action="#" method="POST">
             <div class="contact-form-grid">
@@ -19,21 +19,21 @@
     <!-- Middle Column: Contact Info -->
     <div class="contact-info-column">
         <div class="contact-info-box">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-icon"><img src="images/about/1.png" alt="Location icon"></div>
             <div>
-                <h4>USA office</h4>
-                <p>55 Gerad Lane,<br>NY 11201, USA</p>
+                <h4>Lakmina Lanka</h4>
+                <p>404/4A/1, Mathreedasa Mawatha, Pitipana North, Homagama</p>
             </div>
         </div>
         <div class="contact-info-box">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-icon"><img src="images/about/2.png" alt="Email icon"></div>
             <div>
                 <h4>Email us</h4>
                 <p>test@gamil.com<br>test2@gamil.com</p>
             </div>
         </div>
         <div class="contact-info-box">
-            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-icon"><img src="images/about/3.png" alt="Phone icon"></div>
             <div>
                 <h4>Call us</h4>
                 <p>(+088) 589-8745<br>(+088) 222-9999</p>
