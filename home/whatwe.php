@@ -136,7 +136,7 @@
 </style>
 
 <div class="about-section-wrapper" id="who-we-are">
-    <section class="about-section">
+    <section class="about-section" id="about-section">
 
         <div class="about-text">
             <h2>Who <strong>We Are</strong></h2>

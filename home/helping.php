@@ -24,7 +24,7 @@
             <p class="stat-label">Qualified Engineers</p>
         </div>
         <div class="stat-box">
-            <p class="stat-number">20+</p>
+            <p class="stat-number">05+</p>
             <p class="stat-label">Years Experience</p>
         </div>
     </div>
