@@ -168,10 +168,11 @@
     @media (max-width: 992px) {
         .why-choose-us-container {
             flex-direction: column;
-            gap: 5rem;
+            gap: 2rem;
         }
         .why-choose-us-content {
             text-align: center;
+            max-width: 100%;
         }
         .why-choose-us-content .pre-title {
             justify-content: center;
@@ -179,31 +180,23 @@
         .features-list {
             text-align: left;
         }
+        /* Hide images section completely on mobile */
+        .why-choose-us-images {
+            display: none;
+        }
     }
 
     @media (max-width: 576px) {
+        .why-choose-us-section {
+            padding: 3rem 1rem;
+        }
         .why-choose-us-content .main-title {
             font-size: 2.2rem;
         }
         .features-list {
             grid-template-columns: 1fr;
         }
-        .why-choose-us-images {
-            min-height: 350px;
-        }
-        .why-choose-us-images .main-image {
-            height: 300px;
-        }
-        .why-choose-us-images .overlay-image {
-            height: 220px;
-        }
-        .experience-box {
-            width: 120px;
-            height: 120px;
-        }
-        .experience-box .years {
-            font-size: 2.8rem;
-        }
+        /* Images are hidden on mobile, so no image-related styles needed */
     }
 </style>
 
