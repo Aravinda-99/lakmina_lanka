@@ -225,8 +225,8 @@
         </div>
         <!-- Right Column -->
         <div class="why-choose-us-images">
-            <img class="main-image" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Close up of construction vehicle tire at sunset." onerror="this.onerror=null;this.src='https://placehold.co/500x400/1a237e/FFFFFF?text=Construction';">
-            <img class="overlay-image" src="images/about/why2.jpg" alt="Orange construction truck on a gravel road." onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/FFFFFF?text=Truck';">
+            <img class="main-image" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Close up of construction vehicle tire at sunset." loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/500x400/1a237e/FFFFFF?text=Construction';">
+            <img class="overlay-image" src="images/about/why2.jpg" alt="Orange construction truck on a gravel road." loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/FFFFFF?text=Truck';">
             <div class="experience-box">
                 <span class="years">5</span>
                 <span class="label">Years of Experience</span>

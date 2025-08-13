@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" as="image" href="images/hero/hero1.jpg" fetchpriority="high">
     <script src="js/hero-slideshow.js" defer></script>
 </head>
 <body>
@@ -93,21 +94,21 @@
                 <p class="subtitle">From Residential Complexes To Commercial Buildings, We Manage Every Aspect Of Construction With Precision And Care.</p>
                 <div class="services-grid">
                     <div class="service-card">
-                        <img src="images/construction.jpg" alt="Steel frame construction">
+                        <img src="images/construction.jpg" alt="Steel frame construction" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="service-card-content">
                             <h3>Construction</h3>
                             <p>Construction Of Pre-fabricated Steel Buildings Such As Industrial Factories, Ship Maintenance, Storage Facilities, Hangers, Food Citys, Supermarkets, Fuel Stations and a lot more.</p>
                         </div>
                     </div>
                     <div class="service-card">
-                        <img src="images/logistic.jpg" alt="Logistics and container shipping">
+                        <img src="images/logistic.jpg" alt="Logistics and container shipping" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="service-card-content">
                             <h3>Logistics</h3>
                             <p>Generation Of Container Cabins, Site Offices, Accommodation & Rentals.</p>
                         </div>
                     </div>
                     <div class="service-card">
-                        <img src="images/trading.jpg" alt="Trading and supply chain">
+                        <img src="images/trading.jpg" alt="Trading and supply chain" loading="lazy" decoding="async" fetchpriority="low">
                         <div class="service-card-content">
                             <h3>Trading</h3>
                             <p>For Commercial/Refrigerator Purpose We Undertake Import, Supplying And Installation Of Pre-fab / Cold Room Solutions. Additionally We Are One Of The Largest Steel Building Material & Equipment Suppliers.</p>
@@ -208,7 +209,7 @@
                             </form>
                         </div>
                         <div class="image-column">
-                            <img src="images/hero/hero5.jpg" alt="Modern container project">
+                            <img src="images/hero/hero5.jpg" alt="Modern container project" loading="lazy" decoding="async" fetchpriority="low">
                         </div>
                     </div>
                 </div>
