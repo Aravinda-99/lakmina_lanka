@@ -71,7 +71,7 @@
             </div>
             <h1>WE ARE ONE OF THE LEADING STEEL</h1>
             <p>WAREHOUSE CONSTRUCTION COMPANIES IN SRI LANKA</p>
-            <a href="#" class="discover-button">DISCOVER MORE</a>
+            <a href="#who-we-are" class="discover-button">DISCOVER MORE</a>
         </div>
     </section>
 
@@ -352,7 +352,7 @@ function setActiveLink(href) {
   });
 }
 
-document.querySelectorAll('.popup-header a, header a').forEach(function(link) {
+document.querySelectorAll('.popup-header a, header a, .discover-button').forEach(function(link) {
   link.addEventListener('click', function(e) {
     var href = link.getAttribute('href');
     if (href && href.startsWith('#') && href.length > 1) {
