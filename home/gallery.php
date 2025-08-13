@@ -7,7 +7,7 @@
     .construction-gallery-section {
         font-family: 'Poppins', sans-serif;
         background-color: #ffffff;
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
         box-sizing: border-box;
     }
 
@@ -54,7 +54,7 @@
     .gallery-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 1rem;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -69,7 +69,6 @@
     }
 
     .gallery-item:hover {
-        transform: translateY(-5px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
 
@@ -84,17 +83,24 @@
 
     /* --- Hidden Gallery Items --- */
     .gallery-item-hidden {
-        display: none;
+        display: none !important;
     }
 
     .gallery-item-hidden.show {
-        display: block;
+        display: block !important;
+    }
+
+    /* Ensure grid items show properly */
+    .gallery-grid .gallery-item-hidden.show {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     /* --- View More Button --- */
     .gallery-view-more {
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 
     .view-more-button {
@@ -160,32 +166,32 @@
     <div class="gallery-grid">
         <!-- Gallery Item 1 -->
         <div class="gallery-item">
-            <img src="images/gallery/g9.jpeg" alt="General construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g9.jpeg" alt="General construction site" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Gallery Item 2 -->
         <div class="gallery-item">
-            <img src="images/gallery/g16.jpeg" alt="Construction project" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g16.jpeg" alt="Construction project" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Gallery Item 3 -->
         <div class="gallery-item">
-            <img src="images/gallery/g18.jpeg" alt="Building construction" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g18.jpeg" alt="Building construction" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Gallery Item 4 -->
         <div class="gallery-item">
-            <img src="images/gallery/g17.jpeg" alt="Steel construction work" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g17.jpeg" alt="Steel construction work" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Gallery Item 5 -->
         <div class="gallery-item">
-            <img src="images/gallery/g19.jpeg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g19.jpeg" alt="Construction site" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Gallery Item 6 -->
         <div class="gallery-item">
-            <img src="images/gallery/g22.jpeg" alt="Building project" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+            <img src="images/gallery/g22.jpeg" alt="Building project" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
 
         <!-- Hidden Gallery Items (initially hidden) -->
@@ -229,8 +235,17 @@ document.addEventListener('DOMContentLoaded', function() {
     viewMoreBtn.addEventListener('click', function() {
         if (!isExpanded) {
             // Show hidden items
-            hiddenItems.forEach(function(item) {
+            hiddenItems.forEach(function(item, index) {
+                console.log('Showing item', index, item);
+                
+                // Add show class (keep gallery-item-hidden for now)
                 item.classList.add('show');
+                
+                // Force display with inline style as absolute backup
+                item.style.setProperty('display', 'block', 'important');
+                
+                console.log('Item classes:', item.className);
+                console.log('Item computed style:', window.getComputedStyle(item).display);
             });
             viewMoreBtn.textContent = 'View Less';
             isExpanded = true;
@@ -238,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide items
             hiddenItems.forEach(function(item) {
                 item.classList.remove('show');
+                item.style.setProperty('display', 'none', 'important');
             });
             viewMoreBtn.textContent = 'View More';
             isExpanded = false;

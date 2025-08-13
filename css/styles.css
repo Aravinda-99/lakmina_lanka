@@ -79,7 +79,7 @@ nav a:hover, nav a.active {
             height: 100vh; /* Full viewport height */
             color: #ffffff;
             /* Background image with a dark overlay for text readability */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero/hero1.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero/hero1.jpg') no-repeat center center/cover;
             position: relative;
         }
 
@@ -1018,7 +1018,9 @@ nav a:hover, nav a.active {
         /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 1rem 2%;
         width: 95%;
         left: 2.5%;
@@ -1026,7 +1028,7 @@ nav a:hover, nav a.active {
     }
 
     nav ul {
-        margin-top: 1rem;
+        margin-top: 0;
         gap: 1rem;
     }
 
@@ -1986,6 +1988,7 @@ nav a:hover, nav a.active {
         left: 2%;
         justify-content: space-between;
         align-items: center;
+        flex-direction: row;
     }
     
     .header-logo {
@@ -2014,6 +2017,7 @@ nav a:hover, nav a.active {
         border-radius: 0 0 20px 20px;
         padding: 1rem 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
     }
     
     nav.active {
@@ -2052,6 +2056,7 @@ nav a:hover, nav a.active {
         align-items: center;
         flex-shrink: 0;
         visibility: visible !important;
+        order: 2;
     }
 }
 

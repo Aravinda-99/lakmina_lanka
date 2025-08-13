@@ -168,10 +168,11 @@
     @media (max-width: 992px) {
         .why-choose-us-container {
             flex-direction: column;
-            gap: 5rem;
+            gap: 2rem;
         }
         .why-choose-us-content {
             text-align: center;
+            max-width: 100%;
         }
         .why-choose-us-content .pre-title {
             justify-content: center;
@@ -179,31 +180,23 @@
         .features-list {
             text-align: left;
         }
+        /* Hide images section completely on mobile */
+        .why-choose-us-images {
+            display: none;
+        }
     }
 
     @media (max-width: 576px) {
+        .why-choose-us-section {
+            padding: 3rem 1rem;
+        }
         .why-choose-us-content .main-title {
             font-size: 2.2rem;
         }
         .features-list {
             grid-template-columns: 1fr;
         }
-        .why-choose-us-images {
-            min-height: 350px;
-        }
-        .why-choose-us-images .main-image {
-            height: 300px;
-        }
-        .why-choose-us-images .overlay-image {
-            height: 220px;
-        }
-        .experience-box {
-            width: 120px;
-            height: 120px;
-        }
-        .experience-box .years {
-            font-size: 2.8rem;
-        }
+        /* Images are hidden on mobile, so no image-related styles needed */
     }
 </style>
 
@@ -232,8 +225,8 @@
         </div>
         <!-- Right Column -->
         <div class="why-choose-us-images">
-            <img class="main-image" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Close up of construction vehicle tire at sunset." onerror="this.onerror=null;this.src='https://placehold.co/500x400/1a237e/FFFFFF?text=Construction';">
-            <img class="overlay-image" src="images/about/why2.jpg" alt="Orange construction truck on a gravel road." onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/FFFFFF?text=Truck';">
+            <img class="main-image" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop" alt="Close up of construction vehicle tire at sunset." loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/500x400/1a237e/FFFFFF?text=Construction';">
+            <img class="overlay-image" src="images/about/why2.jpg" alt="Orange construction truck on a gravel road." loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/FFFFFF?text=Truck';">
             <div class="experience-box">
                 <span class="years">5</span>
                 <span class="label">Years of Experience</span>
