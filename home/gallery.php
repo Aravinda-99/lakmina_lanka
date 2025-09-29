@@ -218,6 +218,54 @@
         <div class="gallery-item gallery-item-hidden">
             <img src="images/gallery/g13.jpeg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
         </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g26.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g27.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g28.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g29.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g30.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g31.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g32.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g33.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g35.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g36.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g37.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
+
+        <div class="gallery-item gallery-item-hidden">
+            <img src="images/gallery/g38.jpg" alt="Construction site" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Construction';">
+        </div>
     </div>
 
     <!-- View More Button -->
