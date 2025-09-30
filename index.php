@@ -19,7 +19,7 @@
     <!-- Popup Header (hidden by default, shown on scroll) -->
     <div class="popup-header" style="display:none;">
         <div class="header-logo">
-            <div class="logo-icon"><img src="images/gallery/logo.png" width="25" height="20"></div>
+            <div class="logo-icon"><img src="images/logo1.png" width="25" height="20"></div>
             <div class="logo-text">
                 LAKMINA LANKA<br>
                 BUILDING SYSTEMS (PVT) LTD.
@@ -38,7 +38,7 @@
     <!-- Header Section with Logo and Navigation -->
     <header>
         <div class="header-logo">
-            <div class="logo-icon"><img src="images/gallery/logo.png" width="30" height="30"></div>
+            <div class="logo-icon"><img src="images/logo1.png" width="30" height="30"></div>
             <div class="logo-text">
                 LAKMINA LANKA<br>
                 BUILDING SYSTEMS (PVT) LTD.
@@ -63,7 +63,7 @@
     <section class="hero-section">
         <div class="hero-content">
             <div class="hero-logo">
-                <div class="logo-icon"><img src="images/gallery/logo.png" width="50" height="50"></div>
+                <div class="logo-icon"><img src="images/logo1.png" width="50" height="50"></div>
                 <div class="logo-text">
                     LAKMINA LANKA<br>
                     BUILDING SYSTEMS (PVT) LTD.
@@ -276,7 +276,7 @@
             <div class="footer-main">
                 <div class="footer-column">
                     <div class="header-logo footer-logo-container">
-                        <div class="logo-icon"><img src="images/gallery/logo.png" width="40" height="35"></div>
+                        <div class="logo-icon"><img src="images/logo2.png" width="50" height="45"></div>
                         <div class="logo-text">
                             LAKMINA LANKA<br>
                             <div class="logo-text-small" style="font-size: 13px;">BUILDING SYSTEMS (PVT) LTD.</div>
